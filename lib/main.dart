@@ -29,6 +29,8 @@ Future<dynamic> main(final context) async {
   }
 
   return context.res.json({
+    "developer": "Edoki Chuks",
+    'role': "App Write Functions Expert",
     'motto': 'Build like a team of hundreds_',
     'learn': 'https://appwrite.io/docs',
     'connect': 'https://appwrite.io/discord',
