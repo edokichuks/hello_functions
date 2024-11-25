@@ -7,11 +7,11 @@ Future<dynamic> main(final context) async {
   // You can use the Appwrite SDK to interact with other services
   // For this example, we're using the Users service
   final client = Client()
-    .setEndpoint(Platform.environment['APPWRITE_FUNCTION_API_ENDPOINT'] ?? '')
-    .setProject(Platform.environment['APPWRITE_FUNCTION_PROJECT_ID'] ?? '')
-    .setKey(context.req.headers['x-appwrite-key'] ?? '');
+      .setEndpoint(Platform.environment['APPWRITE_FUNCTION_API_ENDPOINT'] ?? '')
+      .setProject(Platform.environment['APPWRITE_FUNCTION_PROJECT_ID'] ?? '')
+      .setKey(context.req.headers['x-appwrite-key'] ?? '');
   final users = Users(client);
-  print('context values: ${context.toString()}');
+  print('context values by chuksDev => : ${context}');
 
   try {
     final response = await users.list();
