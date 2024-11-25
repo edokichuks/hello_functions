@@ -11,6 +11,7 @@ Future<dynamic> main(final context) async {
     .setProject(Platform.environment['APPWRITE_FUNCTION_PROJECT_ID'] ?? '')
     .setKey(context.req.headers['x-appwrite-key'] ?? '');
   final users = Users(client);
+  print('context values: ${context.toString()}');
 
   try {
     final response = await users.list();
