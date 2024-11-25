@@ -12,6 +12,7 @@ Future<dynamic> main(final context) async {
       .setKey(context.req.headers['x-appwrite-key'] ?? '');
   final users = Users(client);
   print('context values by chuksDev => : ${context}');
+  context.log('From Logger: context values by chuksDev => ${context}');
 
   try {
     final response = await users.list();
