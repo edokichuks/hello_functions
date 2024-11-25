@@ -12,7 +12,7 @@ Future<dynamic> main(final context) async {
       .setProject(Platform.environment['APPWRITE_FUNCTION_PROJECT_ID'] ?? '')
       .setKey(context.req.headers['x-appwrite-key'] ?? '');
   final users = Users(client);
-  // print('context values by chuksDev => : ${context}');
+  print('context values by chuksDev => : ${context}');
   context.log('From Logger: context values by chuksDev => ${context}');
   
 
