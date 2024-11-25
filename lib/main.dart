@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:dart_appwrite/dart_appwrite.dart';
+import 'package:dart_appwrite/models.dart';
 
 // This Appwrite function will be executed every time your function is triggered
 Future<dynamic> main(final context) async {
@@ -11,9 +12,9 @@ Future<dynamic> main(final context) async {
       .setProject(Platform.environment['APPWRITE_FUNCTION_PROJECT_ID'] ?? '')
       .setKey(context.req.headers['x-appwrite-key'] ?? '');
   final users = Users(client);
-  print('context values by chuksDev => : ${context}');
+  // print('context values by chuksDev => : ${context}');
   context.log('From Logger: context values by chuksDev => ${context}');
-  // context.log('From Logger: context map => ${context.toMap()}');
+  
 
   try {
     final response = await users.list();
