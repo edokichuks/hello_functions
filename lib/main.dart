@@ -13,7 +13,7 @@ Future<dynamic> main(final context) async {
   final users = Users(client);
   print('context values by chuksDev => : ${context}');
   context.log('From Logger: context values by chuksDev => ${context}');
-  context.log('From Logger: context map => ${context.toMap()}');
+  // context.log('From Logger: context map => ${context.toMap()}');
 
   try {
     final response = await users.list();
